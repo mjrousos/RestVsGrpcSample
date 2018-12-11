@@ -12,7 +12,7 @@ namespace CodingMilitia.RestVsGrpcSample.Benchmark
         {
             using (var client = new HttpClient())
             {
-                for (var i = 0; i < 100; ++i)
+                for (var i = 0; i < 1000; ++i)
                 {
                     await client.GetAsync("http://localhost:5000");
                 }
@@ -24,7 +24,7 @@ namespace CodingMilitia.RestVsGrpcSample.Benchmark
         {
             var client = new HelloClient();
             client.Connect();
-            for (var i = 0; i < 100; ++i)
+            for (var i = 0; i < 1000; ++i)
             {
                 await client.SendMessageAsync();
             }
